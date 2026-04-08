@@ -53,7 +53,7 @@ Tested on **GOOGL/IVV — 2016 to 2020**
 ## How to Run
 
 ```bash
-git clone https://github.com/yourname/PairsTradingBot
+git clone https://github.com/akkuya/PairsTradingBot
 cd PairsTradingBot
 pip install -r requirements.txt
 python main.py
