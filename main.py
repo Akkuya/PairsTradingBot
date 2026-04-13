@@ -19,7 +19,7 @@ def main():
     _, z_score = compute_spread(data[tickers[0]], data[tickers[1]], beta)
     signals = generate_signals(z_score=z_score)
     portfolio = backtest(signals, data, tickers[0], tickers[1], initial_capital=capital, transaction_cost=cost)
-    compute_metrics(portfolio, signals, data, capital)
+    compute_metrics(portfolio, signals, data, capital, start, end)
     
 if __name__ == "__main__":
     main()

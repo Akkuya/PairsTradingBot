@@ -1,7 +1,7 @@
-from pandas import Series
+from pandas import Series, DataFrame
 from math import floor
 
-def backtest(signals: Series, data: Series, ticker_a: str, ticker_b: str,  initial_capital=10000, transaction_cost=0.001) -> Series:
+def backtest(signals: Series, data: DataFrame, ticker_a: str, ticker_b: str,  initial_capital=10000, transaction_cost=0.001) -> Series:
     """
     Simulates a pairs trading strategy based on generated signals.
 

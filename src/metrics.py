@@ -2,7 +2,7 @@ from pandas import Series, DataFrame
 import matplotlib.pyplot as plt
 from src.data import get_closing_prices
 
-def compute_metrics(portfolio_values: Series, signals: Series, data: DataFrame, initial_capital: int) -> None:
+def compute_metrics(portfolio_values: Series, signals: Series, data: DataFrame, initial_capital: int, start: str, end: str) -> None:
     """
     Computes and displays performance metrics for a trading strategy.
 
@@ -30,7 +30,7 @@ def compute_metrics(portfolio_values: Series, signals: Series, data: DataFrame, 
         - Assumes 252 trading days per year.
         - Uses a fixed 5% annual risk-free rate.
     """
-    spy_price = get_closing_prices(tickers=["SPY"], start="2016-01-01", end="2020-12-31")
+    spy_price = get_closing_prices(tickers=["SPY"], start=start, end=end)
 
     spy_normalized = (spy_price / spy_price.iloc[0]) * initial_capital
 
